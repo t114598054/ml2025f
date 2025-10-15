@@ -153,7 +153,10 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      在 U-Net 3D 心肌分割模型的訓練過程中，我對 訓練資料量 與 計算成本 的關係有了最直觀的感受。
+      當訓練樣本從 9 筆增加到 30 筆 時，我明顯觀察到 訓練耗時 和 GPU 記憶體佔用 呈現顯著的增長。
+      這突顯了 3D 醫學影像 訓練的工程挑戰：由於 U-Net 3D 架構本身的計算複雜度高，即使是訓練資料的小幅增加，也會造成 資源消耗的急劇攀升。
+      但這次經驗讓我理解，在實際的 AI 開發中，計算資源分配 與 訓練效率 往往是與模型性能同等重要的關鍵問題。
     </div>
   </div>
 
@@ -169,22 +172,31 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>
+            Simple baseline - 
+            完成colab baseline的訓練並產生權重檔
+          </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>
+            Medium baseline - 
+            調整並增加使用的訓練資料集(AICUP_training.json)
+          </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>
+            Strong baseline - 
+            使用其他模型(例如. Attn U-Net、UNETR、Swin UNETR...等)，對心臟資料進行訓練，並繳交colab程式碼。
+          </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -194,11 +206,24 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
+   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              Simple Baseline Dice分數圖片
+              <img src="img393.png" width="100%" height="560">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Medium Baseline Dice分數圖片
+              <img src="img5305.png" width="100%" height="560">
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
