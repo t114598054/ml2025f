@@ -153,7 +153,12 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      通過深入學習物件偵測（Object Detection），我對整個流程有了更為系統性的認識。
+      特別是對於像 YOLO 這樣的先進模型，我意識到其架構設計和版本演進是效能提升的關鍵。
+      我學會了如何動手準備高品質的訓練資料，理解到資料集的平衡性和標註的一致性直接影響模型的泛化能力。
+      實戰經驗讓我能根據不同的場景需求（如即時性或高準確度）靈活選擇合適的 YOLO 模型版本，
+      並透過精確調校超參數（Hyperparameters），如學習率排程與優化器選擇，來平衡速度與準確度，有效提升模型的部署可行性。
+      這份經驗讓我對 AI 視覺應用充滿信心。
     </div>
   </div>
 
@@ -169,22 +174,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 完成 baseline Colab 訓練得到訓練分數及訓練權重</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 調整訓練筆數、Epochs 或其他參數得到比 Simple baseline 更高的分數</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 使用不同版本、大小模型進行訓練並繳交 Colab</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -196,14 +201,26 @@
   <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              Simple Baseline mAP50 分數圖片
+              <img src="img1.png" width="100%">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Medium Baseline mAP50 分數圖片，使用Baseline模型接續訓練20個 Epochs 得到更高分
+              <img src="img2.png" width="100%">
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-
   <!-- ------------------------------------------------>
-
+  
   <!-- ------------------------------------------------>
 
 
