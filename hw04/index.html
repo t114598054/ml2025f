@@ -153,7 +153,12 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次作業最讓我印象深刻的環節，是醫學影像標註的實作與應用。
+      透過親自使用 Labelme 工具，我深入學習了如何對電腦斷層 (CT) 轉換而來的 .png 圖像進行精確的區域標記。
+      這不僅是單純的畫框或描邊，更是將醫學專業知識轉化為深度學習模型可讀取資料的關鍵步驟。
+      我意識到，標註的準確性與一致性直接決定了模型能否準確學習病灶特徵。
+      此外，結合標註後的資料，再進行資料擴充 (Data Augmentation)，能極大化利用有限的標註資源，提升模型的訓練效率與泛化能力。
+      這讓我對高品質標註在建構可靠醫學 AI 模型的過程中，所扮演的核心角色有了更為透徹的理解。
     </div>
   </div>
 
@@ -169,22 +174,33 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>
+            Simple baseline - 將06_ct.nii.gz 透過3D Slicer 還原成233切的 .dcm檔，將含有主動脈瓣的 .dcm壓縮成 dcm.zip 透過 Colab 轉成 .png檔。
+            使用 Labelme 內建基本功能 Create Rectangle，對 .png檔進行手動主動脈瓣標註。將標註過程全程錄影，然後將影片上傳到 YouTube (或是直播到YouTube)。
+          </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>
+            Medium baseline - 將06_ct.nii.gz 透過3D Slicer 擴充圖片至64張。
+            使用 Labelme 內建基本功能 Create Rectangle，對 .png檔進行手動主動脈瓣標註。
+            將標註過程全程錄影，然後將影片上傳到 YouTube (或是直播到YouTube)。
+          </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>
+            Strong baseline - 上傳整理完的一份 .txt 檔至 github
+            <br>AP 分數，名列全班前20名。(1pt)
+            <br>AP 分數，名列全班前10名。(1pt)
+          </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" ></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -196,9 +212,26 @@
   <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      Simple 標註 6:40~22:05、Medium 標註 30:20~40:30
+      <iframe 
+        width="100%" 
+        height="800"
+        src="https://www.youtube.com/embed/b-rEPKTQO8w" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+  
+
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+      標註檔連結: 
+      <a href="https://github.com/t114598054/ml2025f/blob/main/hw04/114598054.txt" download="">
+        https://github.com/t114598054/ml2025f/blob/main/hw04/114598054.txt
+      </a>
     </div>
   </div>
 
